@@ -10,8 +10,9 @@
 
 <body class="call">
     <video id="localVideo" autoplay muted></video>
-    <video id="remoteVideo" autoplay></video>
-    <button onclick="location = 'index.html'" class="end">📞</button>
+    <video id="remoteVideo" autoplay onplaying="getElementById('room_key').className = 'hidden' "></video>
+    <p id="room_key">room key: <em id="key">?</em></p>
+    <button onclick="location = 'index.html'" class="end"><img src="img/phone.png"></button>
     <script src="script.js"></script>
 </body>
 

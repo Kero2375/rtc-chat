@@ -11,13 +11,33 @@
 <body class="home">
     <h1>WebCall</h1>
     <div>
-        <input type="text" placeholder="abc123" onchange="h = this.value">
-        <button onclick="location = 'call.html#' + h">GO TO ROOM</button>
+        <p>Enter to an existing room</p>
+        <input class="hash" type="text" placeholder="abc123" onchange="setRoom(this.value)" autocomplete="on">
+        <button class="btn" onclick="startCall()">ENTER</button>
+        <p>Or create your own</p>
+        <button class="btn" onclick="newCall()">NEW ROOM</button>
     </div>
-    OR
-    <div>
-        <button onclick="location = 'call.html' ">RANDOM</button>
-    </div>
+    <small>Disclaimer: the chat is not 100% secure</small>
 </body>
+
+<script>
+    room = "";
+
+    function setRoom(h) {
+        room = h;
+    }
+
+    function startCall() {
+        room = room.trim();
+        if (room)
+            location = 'call.html#' + room;
+        else
+            alert("Invalid room key");
+    }
+
+    function newCall() {
+        location = 'call.html';
+    }
+</script>
 
 </html>

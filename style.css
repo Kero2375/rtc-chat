@@ -1,8 +1,19 @@
+:root {
+    --main-color: rgb(64, 62, 77);
+    --exit-color: rgb(223, 68, 68);
+    --text-color: black;
+    --alt-text-color: white;
+}
+
 * {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
 }
 
 .call {
+    background-color: var(--main-color);
     display: flex;
     height: 100vh;
     margin: 0;
@@ -10,23 +21,28 @@
     justify-content: center;
 }
 
+.call p {
+    text-align: center;
+    position: fixed;
+    color: var(--alt-text-color);
+}
+
+.call p em {
+    color: var(--alt-text-color);
+    display: block;
+    margin: .3em;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
 video {
     border-radius: 8px;
     box-shadow: #00000020 1px 1px 10px;
-}
-
-.copy {
-    display: none;
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-    padding: 1em;
-    box-shadow: #00000020 1px 1px 10px;
-    border-radius: 8px;
 }
 
 #remoteVideo {
@@ -46,8 +62,7 @@ video {
     bottom: 2em;
     width: 4em;
     height: 4em;
-    background-color: rgb(223, 68, 68);
-    color: white;
+    background-color: var(--exit-color);
     border: none;
     border-radius: 1000px;
     box-shadow: #00000020 1px 1px 10px;
@@ -58,26 +73,39 @@ video {
     text-align: center;
 }
 
-.home * {
-    margin: 1em 0;
+.home h1 {
+    background-color: var(--main-color);
+    color: var(--alt-text-color);
+    padding: .5em;
 }
 
-.home button {
+.home div {
+    margin: 1em;
+}
+
+.home div * {
+    margin: .5em;
+}
+
+.home .btn {
+    display: inline-block;
     border: none;
-    height: 2.4em;
     cursor: pointer;
+    padding: 1em;
+    border-radius: 5px;
 }
 
-.home button:hover {
-    background-color: #77a9eb;
+.home .btn:hover {
+    background-color: var(--main-color);
+    color: var(--alt-text-color);
+    box-shadow: #00000020 1px 1px 10px;
 }
 
-.home input {
+.home .hash {
     border: none;
-    border-bottom: 2px solid grey;
-    height: 2em;
-    padding: .2em;
+    padding: 1em;
     width: 6em;
+    border-bottom: 2px solid #999;
 }
 
 @media screen and (max-width: 800px) {

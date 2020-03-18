@@ -8,6 +8,7 @@ const roomHash = location.hash.substring(1);
 const drone = new ScaleDrone('aIKFh3e3N8pQEGAN');
 // Room name needs to be prefixed with 'observable-'
 const roomName = 'observable-' + roomHash;
+document.getElementById("key").innerHTML = roomHash;
 const configuration = {
     iceServers: [{
         urls: 'stun:stun.l.google.com:19302'
@@ -84,7 +85,10 @@ function startWebRTC(isOfferer) {
         // Display your local video in #localVideo element
         localVideo.srcObject = stream;
         // Add your stream to be sent to the conneting peer
-        stream.getTracks().forEach(track => pc.addTrack(track, stream));
+        if (confirm("Your video will be visible to everyone in the room. Confirm?"))
+            stream.getTracks().forEach(track => pc.addTrack(track, stream));
+        else
+            location = 'index.html';
     }, onError);
 
     // Listen to signaling data from Scaledrone
