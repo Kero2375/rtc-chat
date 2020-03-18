@@ -8,7 +8,7 @@ body {
 }
 
 video {
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: #00000020 1px 1px 10px;
 }
 
@@ -26,13 +26,20 @@ video {
 }
 
 #remoteVideo {
-    max-height: 100vh;
     max-width: 100%;
+    max-height: 100vh;
 }
 
 #localVideo {
     position: absolute;
     top: 2em;
     right: 2em;
-    max-height: 20em;
+    height: 10em;
+}
+
+@media screen and (max-width: 800px) {
+    #localVideo {
+        height: 5em;
+        border-radius: 1000px;
+    }
 }
