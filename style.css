@@ -26,12 +26,13 @@ video {
 }
 
 #remoteVideo {
-    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #localVideo {
     position: absolute;
     top: 2em;
     right: 2em;
-    height: 20%;
+    max-height: 20em;
 }
