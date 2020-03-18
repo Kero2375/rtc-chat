@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+video {
+    border-radius: 5px;
+    box-shadow: #00000020 1px 1px 10px;
+}
+
+.copy {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: #00000020 1px 1px 10px;
+    border-radius: 5px;
+}
+
+#remoteVideo {
+    width: 100%;
+}
+
+#localVideo {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    height: 15em;
+}
