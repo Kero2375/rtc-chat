@@ -65,7 +65,8 @@ video {
     background-color: var(--exit-color);
     border: none;
     border-radius: 1000px;
-    box-shadow: #00000020 1px 1px 10px;
+    box-shadow: 20px 20px 60px #515173, 
+             -20px -20px 60px #6d6d9b;
     cursor: pointer;
 }
 
