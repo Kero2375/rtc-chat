@@ -1,2 +1,2 @@
 # webchat
-Simple WebRTC video chat
+Basic WebRTC video chat
